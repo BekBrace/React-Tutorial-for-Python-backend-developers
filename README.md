@@ -1,21 +1,27 @@
 # React-Tutorial-for-Python-backend-developers
-React Tutorial for Python backend developers
+
+
 Howdie partners !
+
 This is how to connect Django backend framework to React front library 
+
 We are goint to create simple data entry application in the backend and return data on the frontend from the backend using Axios library
 
 Reason to choose React with Django:
+
 Both React and Django are the most popular libraries and frameworks in their respective domains.
 React’s SPA optimization and Django’s powerful features make it even better.
 They have large community support and provide immediate assistance whenerver needed.
 
 Both Django and React parts will be handled seperately and this results in:
+
 - Cleaner and Clear interface between front-end and back-end logic and functions.
 - Easy to deploy either the front-end part or the back-end part without redeploying the other.
 - If there are separate teams working in front-end and back-end respectively they need not worry about another part as both can work independently.
 - scalable and multiple client (web, mobile) apps. All the clients will have to consume the same API provided by the back-end side.
 
 We need to work on 2 parts :
+
 1- The Back-end  where we're going to create API using DJANG-REST 
 2- and the front-end where we will interact directly with the API using React JS.
 
