@@ -23,32 +23,46 @@ Both Django and React parts will be handled seperately and this results in:
 We need to work on 2 parts :
 
 1- The Back-end  where we're going to create API using DJANG-REST 
+
 2- and the front-end where we will interact directly with the API using React JS.
 
 So, we're going to create a simple project to write employee's name and his department in the backend and then connect react 
 as our main frontend to django server to fetch data and display it in our react application.
 
 We will need django isntalled obviously, 
+
 and I will work in virtual environemnt, i will use pipenv, so if you dont'have it, you can pip install pipenv and once that finsihed
+
 go ahead and pipenv install djangorestframework first which is a toolkit for building our API; and also we need to 
+
 pipenv isntall django-cors-headers for handling the server headers required for 
+
 Cross-Origin Resource Sharing (CORS) and this is to add CORS headers which allows our API to be accessed on other domains.
+
 and later we will add corsheaders in INSTALLED_APP in settings file in django.
 
 models.py: Now let’s create a database model for our project. 
+
 Here is models.py file of our app : ewmployee and department are two fields that are used to store the name of the empl and her or his department respectively.
 
 serializer.py: Create serializer.py inside the app folder. 
+
 and Serializers are basically used to convert complex data to native Python datatypes that can then be easily rendered into JSON(Which we are going to use in React on the client side). 
  
 views.py: Here is views.py in which we can create our method like GET, PUT, POST, DELETE. 
+
 We will have only two methods, get and post
+
 In  GET method we are returning data from the model by calling React.objects.all() and then using list comprehension to convert the emp and deptmt in python’s dictionary. 
+
 In the POST method, we are simply saving the data bypassing the data to ReactSerializer(). 
+
 It’s time to define the endpoint of the API which is the URL where our client will hit to consume data from the server. 
+
 It is generally the place where our resources (database and other functions) live.
 
 urls.py: Here is the main urls.py from the project. 
+
 The localhost:8000  is the end-point of our ReactView class.
 
 
@@ -65,7 +79,9 @@ There are few changes in settings.py file which are listed below
 and the cors headers package is used to tell the browser that web application running at one origin, access to our backend resources from a different origin. 
 
 Now let's python manage.py makemigrations 
+
 then python manage.py migrate
+
 and then python manage.py createsuperuser
 
 python manage.py runserver
